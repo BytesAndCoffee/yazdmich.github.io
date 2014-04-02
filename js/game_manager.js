@@ -100,9 +100,11 @@ GameManager.prototype.run = function() {
 
 GameManager.prototype.run = function() {
   this.keys = [0, 1, 2, 3];
-  this.keys.forEach(function(i){
-    this.move(i);
-  }.bind(this));
+  setTimeout(function(){
+    this.keys.forEach(function(i){
+      this.move(i);
+    }.bind(this));
+  }, animationDelay);
   var timeout = animationDelay;
   if (this.running && !this.over && !this.won) {
     var self = this;
