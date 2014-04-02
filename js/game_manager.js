@@ -109,5 +109,5 @@ GameManager.prototype.run = function() {
         self.run();
       }, timeout);
     }
-  });
+  }.bind(this));
 }
