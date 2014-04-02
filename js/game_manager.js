@@ -98,7 +98,7 @@ GameManager.prototype.run = function() {
     }, timeout);
   }
 }
-*/
+
 
 GameManager.prototype.run = function () {
     this.keys = [0, 1, 2, 3];
@@ -114,4 +114,25 @@ GameManager.prototype.run = function () {
             self.run();
         }, timeout);
     }
+}
+*/
+GameManager.prototype.run = function () {
+    var keys = [0, 1, 2, 3];
+    var i = 0;
+
+    function cont() {
+        if (!this.running || this.over || this.won) {
+            return;
+        }
+
+        if (i >= keys.length) {
+            setTimeout(this.run.bind(this), animationDelay);
+            return;
+        }
+
+        this.move(keys[i]);
+        setTimeout(cont, animationDelay);
+    }.bind(this);
+
+    cont();
 }
