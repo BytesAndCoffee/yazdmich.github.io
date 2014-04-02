@@ -125,11 +125,14 @@ GameManager.prototype.run = function () {
             return;
         }
         setTimeout(this.run.bind(this), 1000);
-        setTimeout(function(){this.move(0);}.bind(this), 1000);
-        setTimeout(function(){this.move(1);}.bind(this), 2000);
-        setTimeout(function(){this.move(2);}.bind(this), 3000);
-        setTimeout(function(){this.move(3);}.bind(this), 4000);
-        clearTimeout();
+        var s1 = setTimeout(function(){this.move(0);}.bind(this), 1000);
+        var s2 = setTimeout(function(){this.move(1);}.bind(this), 2000);
+        var s3 = setTimeout(function(){this.move(2);}.bind(this), 3000);
+        var s4 = setTimeout(function(){this.move(3);}.bind(this), 4000);
+        clearTimeout(s1);
+        clearTimeout(s2);
+        clearTimeout(s3);
+        clearTimeout(s4);
         /*
         while (i <= 3) {
             console.log(i)
