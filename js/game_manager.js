@@ -121,11 +121,11 @@ GameManager.prototype.run = function () {
     var i = 0;
 
     var cont = function cont() {
-        if (this.running && !this.over && !this.won) {
+        if (!this.running || this.over || this.won) {
             return;
         }
 
-        while (i >= keys.length) {
+        while (i <= keys.length) {
             setTimeout(this.run.bind(this), animationDelay);
             this.move(keys[i]);
             i++;
