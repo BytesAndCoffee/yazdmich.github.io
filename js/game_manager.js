@@ -102,12 +102,12 @@ GameManager.prototype.run = function() {
   this.keys = [0, 1, 2, 3];
   this.keys.forEach(function(i){
     this.move(i);
-    var timeout = animationDelay;
-    if (this.running && !this.over && !this.won) {
-      var self = this;
-      setTimeout(function(){
-        self.run();
-      }, timeout);
-    }
   }.bind(this));
+  var timeout = animationDelay;
+  if (this.running && !this.over && !this.won) {
+    var self = this;
+    setTimeout(function(){
+      self.run();
+    }, timeout);
+  }
 }
