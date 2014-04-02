@@ -110,5 +110,5 @@ GameManager.prototype.run = function() {
       }, timeout);
     }
   }
-};
+}
 
