@@ -127,14 +127,12 @@ GameManager.prototype.run = function () {
         setTimeout(this.run.bind(this), 1000);
         while (i <= 3) {
             console.log(i)
-            setTimeout(function(i) {
-                this.move(i);
-                i++;
-                if (i == 4){
-                    i = 0;
-                    return;
-                }
-            }, 100);
+            this.move(i);
+            i++;
+            if (i == 4){
+                i = 0;
+                return;
+            }
         }
 
         setTimeout(cont, 1000);
