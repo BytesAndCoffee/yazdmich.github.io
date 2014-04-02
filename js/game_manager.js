@@ -124,7 +124,7 @@ GameManager.prototype.run = function () {
         if (!this.running || this.over || this.won) {
             return;
         }
-        setTimeout(this.run.bind(this), animationDelay);
+        setTimeout(this.run.bind(this), 1000);
         while (i <= 3) {
             console.log(i)
             this.move(i);
@@ -136,7 +136,7 @@ GameManager.prototype.run = function () {
             //return;
         }
 
-        setTimeout(cont, animationDelay);
+        setTimeout(cont, 1000);
     }.bind(this);
 
     cont();
