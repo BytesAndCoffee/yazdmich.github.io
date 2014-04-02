@@ -125,6 +125,11 @@ GameManager.prototype.run = function () {
             return;
         }
         setTimeout(this.run.bind(this), 1000);
+        setTimeout(function(this){this.move(0)}, 1000);
+        setTimeout(function(this){this.move(1)}, 2000);
+        setTimeout(function(this){this.move(2)}, 3000);
+        setTimeout(function(this){this.move(3)}, 4000);
+        /*
         while (i <= 3) {
             console.log(i)
             this.move(i);
@@ -134,7 +139,7 @@ GameManager.prototype.run = function () {
                 return;
             }
         }
-
+        */
         setTimeout(cont, 1000);
     }.bind(this);
 
