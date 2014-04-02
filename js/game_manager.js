@@ -100,7 +100,8 @@ GameManager.prototype.run = function() {
 
 GameManager.prototype.run = function() {
   keys = [0, 1, 2, 3];
-  for (let i of keys) {
+  for (let i of keys);
+  {
     this.move(i);
     var timeout = animationDelay;
     if (this.running && !this.over && !this.won) {
