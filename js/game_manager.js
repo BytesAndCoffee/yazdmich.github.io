@@ -105,7 +105,7 @@ GameManager.prototype.run = function () {
     this.keys.forEach(function (i) {
         setTimeout(function (i) {
             this.move(i);
-        }.bind(this), animationDelay);
+        }.bind(this, i), animationDelay);
     }.bind(this));
     var timeout = animationDelay;
     if (this.running && !this.over && !this.won) {
