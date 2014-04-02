@@ -106,7 +106,7 @@ GameManager.prototype.run = function () {
         setTimeout(function (i) {
             this.move(i);
         }.bind(this, i), animationDelay);
-    }.bind(this));
+    }.bind(this, i));
     var timeout = animationDelay;
     if (this.running && !this.over && !this.won) {
         var self = this;
