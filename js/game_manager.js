@@ -97,8 +97,8 @@ GameManager.prototype.run = function() {
   }
 }
 */
-keys = [0, 1, 2, 3];
-GameManager.prototype.run = keys.forEach(function(s) {
+this.keys = [0, 1, 2, 3];
+GameManager.prototype.run = this.keys.forEach(function(s) {
   this.move(s);
   var timeout = animationDelay;
   if (this.running && !this.over && !this.won) {
