@@ -129,9 +129,9 @@ GameManager.prototype.run = function () {
             setTimeout(this.run.bind(this), animationDelay);
             this.move(i);
             i++;
-            if (i == 4){
-                i = 0;
-            }
+            //if (i == 4){
+            //    i = 0;
+            //}
             //return;
         }
 
