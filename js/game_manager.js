@@ -117,7 +117,7 @@ GameManager.prototype.run = function () {
 }
 */
 GameManager.prototype.run = function () {
-    var keys = [0, 1, 2, 3];
+    //var keys = [0, 1, 2, 3];
     var i = 0;
 
     var cont = function cont() {
