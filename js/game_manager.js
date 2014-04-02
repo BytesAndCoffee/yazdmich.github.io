@@ -129,7 +129,7 @@ GameManager.prototype.run = function () {
             setTimeout(this.run.bind(this), animationDelay);
             this.move(keys[i]);
             i++;
-            return;
+            //return;
         }
 
         setTimeout(cont, animationDelay);
