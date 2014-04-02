@@ -120,7 +120,7 @@ GameManager.prototype.run = function () {
     var keys = [0, 1, 2, 3];
     var i = 0;
 
-    function cont() {
+    var cont = function cont() {
         if (!this.running || this.over || this.won) {
             return;
         }
