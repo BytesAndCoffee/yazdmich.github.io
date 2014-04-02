@@ -84,7 +84,7 @@ GameManager.prototype.move = function(direction) {
 }
 
 // moves continuously until game is over
-/*
+
 GameManager.prototype.run = function() {
   var best = this.ai.getBest();
   this.move(best.move);
@@ -96,7 +96,7 @@ GameManager.prototype.run = function() {
     }, timeout);
   }
 }
-*/
+/*
 this.keys = [0, 1, 2, 3];
 GameManager.prototype.run = function() {
   for (let i of this.keys) {
@@ -110,3 +110,4 @@ GameManager.prototype.run = function() {
     }
   }
 };
+*/
