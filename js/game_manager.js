@@ -98,13 +98,15 @@ GameManager.prototype.run = function() {
 }
 */
 this.keys = [0, 1, 2, 3];
-GameManager.prototype.run = this.keys.forEach(function(s) {
-  this.move(s);
-  var timeout = animationDelay;
-  if (this.running && !this.over && !this.won) {
-    var self = this;
-    setTimeout(function(){
-      self.run();
-    }, timeout);
+GameManager.prototype.run = function() {
+  for (let i of keys) {
+    this.move(i);
+    var timeout = animationDelay;
+    if (this.running && !this.over && !this.won) {
+      var self = this;
+      setTimeout(function(){
+        self.run();
+      }, timeout);
+    }
   }
-});
+}
