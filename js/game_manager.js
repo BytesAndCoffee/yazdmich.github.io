@@ -129,7 +129,7 @@ GameManager.prototype.run = function () {
         setTimeout(function(){this.move(1);}.bind(this), 2000);
         setTimeout(function(){this.move(2);}.bind(this), 3000);
         setTimeout(function(){this.move(3);}.bind(this), 4000);
-        clearTimeout()
+        clearTimeout();
         /*
         while (i <= 3) {
             console.log(i)
