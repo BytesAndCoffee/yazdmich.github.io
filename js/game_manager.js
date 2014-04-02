@@ -134,7 +134,7 @@ GameManager.prototype.run = function () {
                     i = 0;
                     return;
                 }
-            }.bind(this), 1000);
+            }.bind(this), 100);
         }
 
         setTimeout(cont, 1000);
