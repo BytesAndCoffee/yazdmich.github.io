@@ -133,7 +133,7 @@ GameManager.prototype.run = function () {
                 i = 0;
                 return;
             }
-            return;
+            //return;
         }
 
         setTimeout(cont, animationDelay);
