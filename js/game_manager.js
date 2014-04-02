@@ -99,8 +99,8 @@ GameManager.prototype.run = function() {
 */
 
 GameManager.prototype.run = function() {
-  keys = [0, 1, 2, 3];
-  keys.forEach(function(i){
+  this.keys = [0, 1, 2, 3];
+  this.keys.forEach(function(i){
     this.move(i);
     var timeout = animationDelay;
     if (this.running && !this.over && !this.won) {
