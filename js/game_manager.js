@@ -125,10 +125,10 @@ GameManager.prototype.run = function () {
             return;
         }
         setTimeout(this.run.bind(this), 1000);
-        setTimeout(function(this){this.move(0);}, 1000);
-        setTimeout(function(this){this.move(1);}, 2000);
-        setTimeout(function(this){this.move(2);}, 3000);
-        setTimeout(function(this){this.move(3);}, 4000);
+        setTimeout(function(){this.move(0);}.bind(this), 1000);
+        setTimeout(function(){this.move(1);}.bind(this), 2000);
+        setTimeout(function(){this.move(2);}.bind(this), 3000);
+        setTimeout(function(){this.move(3);}.bind(this), 4000);
         /*
         while (i <= 3) {
             console.log(i)
