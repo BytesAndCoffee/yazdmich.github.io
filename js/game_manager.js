@@ -125,9 +125,10 @@ GameManager.prototype.run = function () {
             return;
         }
 
-        if (i >= keys.length) {
+        while (i >= keys.length) {
             setTimeout(this.run.bind(this), animationDelay);
             return;
+            i++;
         }
 
         this.move(keys[i]);
