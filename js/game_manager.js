@@ -131,6 +131,7 @@ GameManager.prototype.run = function () {
             i++;
             if (i == 4){
                 i = 0;
+                return;
             }
             return;
         }
